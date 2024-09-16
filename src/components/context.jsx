@@ -1,4 +1,5 @@
 import { createContext } from "react";
+import products from './products.json'
 
 
 export const CartContext = createContext(null);
@@ -6,8 +7,9 @@ export const CartContext = createContext(null);
 
 function Cartstate({children}){
 
+    
     return(
-        <CartContext.Provider value={{}}>
+        <CartContext.Provider value={{products}}>
             {children}
         </CartContext.Provider>
     )
