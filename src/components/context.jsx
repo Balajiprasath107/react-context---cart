@@ -1,16 +1,16 @@
 import { createContext } from "react";
 
 
-export const cartContext = createContext(null);
+export const CartContext = createContext(null);
 
 
-function cartstate({children}){
+function Cartstate({children}){
 
     return(
-        <cartContext.Provider value={{}}>
+        <CartContext.Provider value={{}}>
             {children}
-        </cartContext.Provider>
+        </CartContext.Provider>
     )
 }
 
-export default cartstate
+export default Cartstate
