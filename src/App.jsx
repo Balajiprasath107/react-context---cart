@@ -3,6 +3,7 @@ import { useState } from 'react'
 import './App.css'
 import Header from './components/header'
 import Navbar from './components/Navbar'
+import Catalog from './components/catalog'
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
     <>
       <Navbar/>
       <Header />
+      <Catalog/>
     </>
   )
 }
