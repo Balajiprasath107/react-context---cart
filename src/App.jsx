@@ -1,9 +1,9 @@
-import { useState } from 'react'
 
 import './App.css'
 import Header from './components/header'
 import Navbar from './components/Navbar'
 import Catalog from './components/catalog'
+import Footer from './components/footer'
 
 function App() {
 
@@ -12,6 +12,7 @@ function App() {
       <Navbar/>
       <Header />
       <Catalog/>
+      <Footer/>
     </>
   )
 }
