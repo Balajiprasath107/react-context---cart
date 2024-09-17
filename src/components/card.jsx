@@ -3,12 +3,14 @@ import { CartContext } from './context'
 
 
 
-function Card({item}) {
-    const [Addtocartstatus,setAddtocart] = useState(false)
-    const {cartCount,setCartCount} = useContext(CartContext)
+function Card({item,status}) {
+    const [Addtocartstatus,setAddtocart] = useState(item.incart)
+    const {removeitem,Additem} = useContext(CartContext)
     function changeAddtoCart(){
-        Addtocartstatus?setCartCount(cartCount-1):setCartCount(cartCount+1)
-        setAddtocart(!Addtocartstatus)
+        Addtocartstatus?removeitem(item): Additem(item)
+        let newStatus = !Addtocartstatus
+        item.incart = newStatus
+        setAddtocart(newStatus)
     }
     return (
         <div className="col mb-5 z-2 positon-absolute">
@@ -49,7 +51,7 @@ function Card({item}) {
                 {/* Product actions*/}
                     <div className="card-footer p-4 pt-0 border-top-0 bg-transparent"onClick={changeAddtoCart}>
                         {
-                        Addtocartstatus?<div className="text-center"><a className="btn btn-outline-dark mt-auto">Remove</a> </div>:
+                        Addtocartstatus?<div className="text-center "><a className="btn btn-outline-dark mt-auto text-white bg-dark">Remove</a> </div>:
                         <div className="text-center"><a className="btn btn-outline-dark mt-auto" >Add to Cart</a> </div>
                         }
                     </div>
