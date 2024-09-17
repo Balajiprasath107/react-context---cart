@@ -32,7 +32,7 @@ function Card({item}) {
                         {/* Product price*/}
                         {
                             <div>
-                                ${item.price}.00
+                                ${item.price}
                             </div>
                         }
 
