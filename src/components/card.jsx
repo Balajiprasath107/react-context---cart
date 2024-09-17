@@ -1,10 +1,13 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import { CartContext } from './context'
 
 
 
 function Card({item}) {
     const [Addtocartstatus,setAddtocart] = useState(false)
+    const {cartCount,setCartCount} = useContext(CartContext)
     function changeAddtoCart(){
+        Addtocartstatus?setCartCount(cartCount-1):setCartCount(cartCount+1)
         setAddtocart(!Addtocartstatus)
     }
     return (
