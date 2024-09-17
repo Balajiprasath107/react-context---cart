@@ -30,15 +30,16 @@ function Routelayout() {
                 </div>
               </li>
             </ul>
+            <NavLink to='cart'>
             <button className="btn btn-outline-dark shadow-none me-5" type="submit" >
               <i className="bi-cart-fill me-1"></i>
               Cart
               <span className="badge bg-dark text-white ms-1 rounded-pill">{cartCount}</span>
 
             </button>
+            </NavLink>
           </div>
         </nav>
-        <Header />
       </header>
       <main>
         <Outlet />
