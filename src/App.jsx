@@ -1,19 +1,23 @@
 
 import './App.css'
-import Header from './components/header'
-import Navbar from './components/Navbar'
-import Catalog from './components/catalog'
-import Footer from './components/footer'
+import { createBrowserRouter, Routes, Route, Link, createRoutesFromElements, RouterProvider } from 'react-router-dom'
+import Routelayout from './components/Routelayout'
+import Home from './components/Home'
+import About from './components/About'
 
 function App() {
 
+  const router =createBrowserRouter(
+    createRoutesFromElements(
+      <Route path='/' element={<Routelayout/>}>
+        <Route path='/' element={<Home/>}></Route>
+        <Route path='about' element={<About/>}></Route>
+      </Route>
+
+    )
+  )
   return (
-    <>
-      <Navbar/>
-      <Header />
-      <Catalog/>
-      <Footer/>
-    </>
+      <RouterProvider router={router} />
   )
 }
 
