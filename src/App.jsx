@@ -4,6 +4,7 @@ import { createBrowserRouter, Routes, Route, Link, createRoutesFromElements, Rou
 import Routelayout from './components/Routelayout'
 import Home from './components/Home'
 import About from './components/About'
+import Cart from './components/cart'
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
       <Route path='/' element={<Routelayout/>}>
         <Route path='/' element={<Home/>}></Route>
         <Route path='about' element={<About/>}></Route>
+        <Route path='cart' element={<Cart/>}></Route>
       </Route>
 
     )
