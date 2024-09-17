@@ -1,7 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
+
+
 
 function Card({item}) {
-    
+    const [Addtocartstatus,setAddtocart] = useState(false)
+    function changeAddtoCart(){
+        setAddtocart(!Addtocartstatus)
+    }
     return (
         <div className="col mb-5 z-2 positon-absolute">
             <div className="card h-100 z-2 positon-absolute">
@@ -38,13 +43,14 @@ function Card({item}) {
 
                     </div>
                 </div>
-                {/* Product actions*/}{
-                    <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div className="text-center"><a className="btn btn-outline-dark mt-auto">Add to Cart</a>
-                        </div>
+                {/* Product actions*/}
+                    <div className="card-footer p-4 pt-0 border-top-0 bg-transparent"onClick={changeAddtoCart}>
+                        {
+                        Addtocartstatus?<div className="text-center"><a className="btn btn-outline-dark mt-auto">Remove</a> </div>:
+                        <div className="text-center"><a className="btn btn-outline-dark mt-auto" >Add to Cart</a> </div>
+                        }
                     </div>
 
-                }
 
             </div>
         </div>
