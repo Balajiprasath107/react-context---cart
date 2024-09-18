@@ -13,14 +13,16 @@ function Cartstate({children}){
         let newbasket = cartContains.filter((content)=> content.id !== item.id)
         setCartContains([...newbasket])
         setCartCount(cartCount-item.quantity)
-        setTotalCartPrice(((TotalCartPrice*100)-((item.price*100)*item.quantity))/100)
+        let newtotal = Math.round((TotalCartPrice*100)-(item.price*100*item.quantity))/100
+        setTotalCartPrice(newtotal)
         item.quantity = 1
     }
     function Additem(item){
         let newbasket = [...cartContains]
         newbasket.push(item)
         setCartContains([...newbasket])
-        setTotalCartPrice(((TotalCartPrice*100)+((item.price*100)*item.quantity))/100)
+        let newtotal = Math.round((TotalCartPrice*100)+((item.price*100)*item.quantity))/100
+        setTotalCartPrice(newtotal)
         setCartCount(cartCount+1)
     }
     return(
