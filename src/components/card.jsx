@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
 import { CartContext } from './context'
-
+import './style.css'
 
 
 function Card({item,status}) {
@@ -20,7 +20,7 @@ function Card({item,status}) {
                 <div className="card-body p-4">
                     <div className="text-center">
                         {/* Product name*/}
-                        <h5 className="fw-bolder">{item.title}</h5>
+                        <h6 className="fw-bolder itemTitle">{item.title}</h6>
                         {/* Product reviews*/}
                         <div className="d-flex justify-content-center small text-warning mb-2">
                             {
