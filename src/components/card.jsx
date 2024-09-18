@@ -51,7 +51,7 @@ function Card({item,status}) {
                 {/* Product actions*/}
                     <div className="card-footer p-4 pt-0 border-top-0 bg-transparent"onClick={changeAddtoCart}>
                         {
-                        Addtocartstatus?<div className="text-center "><a className="btn btn-outline-dark mt-auto text-white bg-dark">Remove</a> </div>:
+                        Addtocartstatus?<div className="text-center "><a className="btn btn-outline-dark mt-auto text-white bg-dark">Remove from cart</a> </div>:
                         <div className="text-center"><a className="btn btn-outline-dark mt-auto" >Add to Cart</a> </div>
                         }
                     </div>
