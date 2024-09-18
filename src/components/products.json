@@ -10,7 +10,8 @@
       "rate": 3.9,
       "count": 120
     },
-    "incart" : false
+    "incart" : false,
+    "quantity" : 1
   },
   {
     "id": 2,
@@ -23,7 +24,8 @@
       "rate": 4.1,
       "count": 259
     },
-    "incart" : false
+    "incart" : false,
+    "quantity" : 1
   },
   {
     "id": 3,
@@ -36,7 +38,8 @@
       "rate": 4.7,
       "count": 500
     },
-    "incart" : false
+    "incart" : false,
+    "quantity" : 1
 
   },
   {
@@ -50,7 +53,8 @@
       "rate": 2.1,
       "count": 430
     },
-    "incart" : false
+    "incart" : false,
+    "quantity" : 1
 
   },
   {
@@ -64,7 +68,8 @@
       "rate": 4.6,
       "count": 400
     },
-    "incart" : false
+    "incart" : false,
+    "quantity" : 1
 
   },
   {
@@ -78,7 +83,8 @@
       "rate": 3.9,
       "count": 70
     },
-    "incart" : false
+    "incart" : false,
+    "quantity" : 1
   },
   {
     "id": 7,
@@ -91,7 +97,8 @@
       "rate": 3,
       "count": 400
     },
-    "incart" : false
+    "incart" : false,
+    "quantity" : 1
 
   },
   {
@@ -105,7 +112,8 @@
       "rate": 1.9,
       "count": 100
     },
-    "incart" : false
+    "incart" : false,
+    "quantity" : 1
 
   },
   {
@@ -119,7 +127,8 @@
       "rate": 3.3,
       "count": 203
     },
-    "incart" : false
+    "incart" : false,
+    "quantity" : 1
 
   },
   {
@@ -133,7 +142,8 @@
       "rate": 2.9,
       "count": 470
     },
-    "incart" : false
+    "incart" : false,
+    "quantity" : 1
 
   }
 ]
