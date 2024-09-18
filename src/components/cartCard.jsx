@@ -67,7 +67,6 @@ function CartCard({ item }) {
                 <h5>Total price: ${item.price * quantity}</h5>
                 <button className="removebtw btn btn-danger m-2" onClick={() => {
                     removeitem(item)
-                    setTotalCartPrice((Math.round((TotalCartPrice*100)-((item.price*100)*item.quantity))/100))
                     item.incart = !(item.incart)
                 }
                 }>Remove</button>

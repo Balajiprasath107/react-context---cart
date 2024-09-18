@@ -13,7 +13,7 @@ function Cartstate({children}){
         let newbasket = cartContains.filter((content)=> content.id !== item.id)
         setCartContains([...newbasket])
         setCartCount(cartCount-item.quantity)
-        let newtotal = Math.round((TotalCartPrice*100)-(item.price*100*item.quantity))/100
+        let newtotal = (Math.round((TotalCartPrice*100)-((item.price*100)*item.quantity)))/100
         setTotalCartPrice(newtotal)
         item.quantity = 1
     }
