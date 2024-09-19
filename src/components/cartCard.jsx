@@ -9,7 +9,7 @@ function CartCard({ item }) {
 
     function handleChange(e) {
         let newquantity = Number(e.target.value)
-        let newTotalCart = (((TotalCartPrice*100)-(item.price*item.quantity*100)+(item.price*newquantity*100))/100)
+        let newTotalCart = (Math.round((TotalCartPrice*100)-(item.price*item.quantity*100)+(item.price*newquantity*100))/100)
         setTotalCartPrice(newTotalCart)
         let newCount = cartCount - item.quantity + newquantity
         item.quantity = newquantity
