@@ -20,8 +20,12 @@ function Cart() {
                             }
                         </div>
                         <div className='checkout'>
-                            <h5 className='fw-bolder mt-2'>Total {cartCount > 1 ? 'Items' : 'Item'} ({cartCount})</h5>
+                            <h5 className='fw-bolder mt-2'>Order Summary</h5>
                             <div className='text-start ps-4 '>
+                            <div className='row mb-1'>
+                                    <div className='col fw-bolder'>Total {cartCount > 1 ? 'Items' : 'Item'}</div>
+                                    <div className='col'>{cartCount}</div>
+                                </div>
                                 <div className='row mb-1'>
                                     <div className='col fw-bolder'>Total Cost</div>
                                     <div className='col'>${TotalCartPrice}</div>
