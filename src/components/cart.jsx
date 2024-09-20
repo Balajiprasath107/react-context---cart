@@ -20,14 +20,26 @@ function Cart() {
                             }
                         </div>
                         <div className='checkout'>
-                            <h5 className='fw-bolder '>SubTotal ({cartCount} {cartCount > 1 ? 'items' : 'item'})</h5>
-                            <div className='ps-5 text-start'>
-                                <p>Total Cost : ${TotalCartPrice}</p>
-                                <p>GST : 18%</p>
-                                <p>Shipping Charge : $50</p>
-                                <p className='fw-bolder'>You Pay : ${Math.round((TotalCartPrice * 100 * 1.18) + (50 * 100)) / 100}</p>
+                            <h5 className='fw-bolder mt-2'>Total {cartCount > 1 ? 'Items' : 'Item'} ({cartCount})</h5>
+                            <div className='text-start ps-4 '>
+                                <div className='row mb-1'>
+                                    <div className='col fw-bolder'>Total Cost</div>
+                                    <div className='col'>${TotalCartPrice}</div>
+                                </div>
+                                <div className='row mb-1'>
+                                    <div className='col fw-bolder'>GST</div>
+                                    <div className='col'>18%</div>
+                                </div>
+                                <div className='row mb-1'>
+                                    <div className='col fw-bolder'>Shipping-cost</div>
+                                    <div className='col'>{TotalCartPrice >= 30 ? 'Free' : '$5'}</div>
+                                </div>
+                                <div className='row fw-bolder mb-1'>
+                                    <div className='col'>You Pay</div>
+                                    <div className='col'>${Math.round((TotalCartPrice * 100 * 1.18) + (5 * 100)) / 100}</div>
+                                </div>
                             </div>
-                            <div> <button className='btn btn-warning'>Proceed to buy</button>
+                            <div className='mb-2'> <button className='btn btn-warning'>Proceed to buy</button>
                             </div>
                         </div>
                     </div>
