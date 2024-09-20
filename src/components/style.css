@@ -69,9 +69,8 @@
 .checkout{
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1rem;
     width: 270px;
-    padding: 10px;
     text-align:center;
     align-self: flex-start;
     justify-content: center;
