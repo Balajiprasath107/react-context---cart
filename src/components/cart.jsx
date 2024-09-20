@@ -28,7 +28,7 @@ function Cart() {
                                 </div>
                                 <div className='row mb-1'>
                                     <div className='col fw-bolder'>Total Cost</div>
-                                    <div className='col'>${TotalCartPrice}</div>
+                                    <div className='col fw-bolder'>${TotalCartPrice}</div>
                                 </div>
                                 <div className='row mb-1'>
                                     <div className='col fw-bolder'>GST</div>
